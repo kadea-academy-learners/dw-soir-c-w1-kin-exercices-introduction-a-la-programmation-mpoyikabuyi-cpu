@@ -16,10 +16,12 @@
 **Mon test dans la console :**
 
 ```js
-// colle ici le test que tu as exécuté et le résultat obtenu
+const ancienneFormation = null;
+console.log(typeof ancienneFormation);
+// Résultat obtenu : object
 ```
 
-**Source :** 
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/typeof
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
@@ -29,17 +31,20 @@
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+**Qu'est-ce que NaN, et pourquoi NaN === NaN renvoie false ?**
+  `NaN` (Not-a-Number) est une valeur spéciale en JavaScript qui représente un résultat numérique invalide ou non représentable (par exemple, suite à une opération mathématique impossible). `NaN === NaN` renvoie `false` par définition dans la norme IEEE 754 (la norme sur les nombres à virgule flottante utilisée par JavaScript), qui stipule qu'un nombre non valide n'est égal à aucune autre valeur numérique, y compris lui-même.
+  Il faut utiliser la fonction `Number.isNaN()` (ou globalement `isNaN()`, bien que `Number.isNaN()` soit plus stricte et recommandée)
 
 **Mon test dans la console :**
 
 ```js
-// colle ici le test que tu as exécuté et le résultat obtenu
+ console.log(NaN === NaN);                           // résultat obtenu : false 
+ console.log(Number.IsNaN(Number('abc')))           // résultat obtenu : true
 ```
 
-**Source :** 
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN
 
-**IA utilisée ? (prompt + vérification sur MDN) :** non
+**IA utilisée ? (prompt + vérification sur MDN) :** oui, je l'ai demandé NaN === renvoi false
 
 ## F3 — Pair ou impair : le tirage des tickets
 
@@ -47,17 +52,18 @@
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+...En javascript, l'opérateur modulo (%) conserve le signe du dividende (le nombre de gauche). Par conséquent,-7% renvoie -1 (et non 1)
+%2 !== 0 plutot que %2 ===1? puisque le reste peut etre négatif si l'on manipule des nombres négatif (comme -1), un test strict === 1 échouera pour les nombres impairs négatifs. En testant !== 0, on s'assure de capturer correctement tous les nombres impairs, qu'ils soient positifs ou négatifs.
 
 **Mon test dans la console :**
 
 ```js
-// colle ici le test que tu as exécuté et le résultat obtenu
+console.log(-7 % 2); // Résultat obtenu : -1
 ```
 
-**Source :** 
+**Source :** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder
 
-**IA utilisée ? (prompt + vérification sur MDN) :** non
+**IA utilisée ? (prompt + vérification sur MDN) :** Oui, je l'ai demandé pour -7 % 2 vont mais 1 garde le signe de 7.
 
 ## F4 — Le contrôleur du bus
 
@@ -65,33 +71,38 @@
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+oui, il est techniquement possible d'enchainer plusieurs opérations ternaires mais ce deconseillé par ceque
+la lisibilité reduite et maintenance difficile.
 
 **Mon test dans la console :**
 
 ```js
-// colle ici le test que tu as exécuté et le résultat obtenu
+const age = 16;
+const status = age >= 16 ? 'mineur' : 'majeur'
+console.log(status);     // Afficher 'mineur'
 ```
 
-**Source :** 
+**Source :** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
 
-**IA utilisée ? (prompt + vérification sur MDN) :** non
+**IA utilisée ? (prompt + vérification sur MDN) :** Oui, je l'ai demandé pourquoi ce deconseillé de mettre plusieur ternaires
 
 ## F5 — Ma première fonction fléchée
 
 **Question :** Quand peut-on enlever les parenthèses autour des paramètres, et quand peut-on enlever return et les accolades ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
-
+quand il ya exactement un paranthètre simple exemple n => n*n elle sont obligatoires pour zéro 
 ...
 
 **Mon test dans la console :**
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
+const carre = (nombre) => { nombre * nombre};
+console.log (carre(7));      // resultat undefined
 ```
 
-**Source :** 
+**Source :** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
@@ -106,12 +117,13 @@
 **Mon test dans la console :**
 
 ```js
-// colle ici le test que tu as exécuté et le résultat obtenu
+// Test avec continue : 3, puis 1 (le 2 est saute)
+// Test avec braek : 3, seulement (la boucle s'arrete au 2)
 ```
 
-**Source :** 
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/continue
 
-**IA utilisée ? (prompt + vérification sur MDN) :** non
+**IA utilisée ? (prompt + vérification sur MDN) :** Oui, je l'ai démande quel est l'importance de continue et quelle est la difference entre continue et break. 
 
 ## M1 — FizzBuzz kinois
 
