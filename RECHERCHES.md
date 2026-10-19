@@ -200,16 +200,18 @@ console.log (["", "0", [], {}, ].map(Boolean));
 **Question :** Que fait l'opérateur ?? (coalescence des nuls) et en quoi est-il différent de || ?
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
-
+l'opération ?? renvoie la valeur de droiteseulementsi celle de gauche est null ou unedefined. l'opérateur|| renvoie la valeur de droite pour toute valeur null ou undefined. l'opérateur || renvoie la valeur de droite pour toute valeur de droite pour toutes valeurfalse : 0, "", false, NaN, null et undefined. avec ?? un score de 0 reste 0.
 ...
 
 **Mon test dans la console :**
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
-```
+console.log(0 || "aucun");  // "aucun"
+console.log(0 ?? "aucun");  // 0
+console.log("" ?? "aucun"); // ""
 
-**Source :** 
+**Source :**https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing 
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
