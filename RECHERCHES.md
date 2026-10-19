@@ -153,7 +153,7 @@ console.log(resultats.join(" , "));       // 1, 2, Malewa, 4, Wewa, Malewa, 7, 8
 
 **Source :** https://coddy.tech/learn/javascript/fundamentals/the_fizzbuzz_function
 
-**IA utilisée ? (prompt + vérification sur MDN) :** non
+**IA utilisée ? (prompt + vérification sur MDN) :** oui 
 
 ## M2 — Le distributeur automatique (DAB)
 
@@ -161,15 +161,17 @@ console.log(resultats.join(" , "));       // 1, 2, Malewa, 4, Wewa, Malewa, 7, 8
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+Pour afficher 75000 sous la forme 75 000, on utilise la méthode toLocaleString()
+sur le nombre, en lui donnant la langue francaise : (toLocalString ("fr-FR)) elle ajoute automatiquement un espace entre les millier, selon les règles de la langues choisie. sans paramètre, elle utilise la langue de l'ordinateur, donc le résultat peut changer d'une machineà l'autres
 
 **Mon test dans la console :**
 
 ```js
-// colle ici le test que tu as exécuté et le résultat obtenu
-```
+// colle ici le test que tu as exécuté et le résultat obtenu      Résultat obtenu
+console.log((75000).toLocaleString("fr-FR));                       // 75000
+console.log((500000).toLocaleString("fr-FR));                      // 500 000
 
-**Source :** 
+**Source :**https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
