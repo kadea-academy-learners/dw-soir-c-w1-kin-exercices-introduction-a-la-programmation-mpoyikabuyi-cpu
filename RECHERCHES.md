@@ -180,16 +180,18 @@ console.log((500000).toLocaleString("fr-FR));                      // 500 000
 **Question :** Quelle est la liste complète des valeurs falsy en JavaScript ? (Indice : il y en a plus que dans cet exercice.)
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
-
-...
+En  javascript, une valeur false est une valeur qui devient `false` quand on la met dans une condition. il y en a 8: `false`, `0`, `On` (le BigInt zéro),`" "`,(chaine vide), `null`, undefined et `NaN`, il existe aussi `document.all`
 
 **Mon test dans la console :**
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
-```
+console.log(["", "0", -0, On, "", null, undefined, NaN].map(Boolean));
+// [false, false, false, false, false, false, false,false ,fasle ]
 
-**Source :** 
+console.log (["", "0", [], {}, ].map(Boolean));
+
+**Source :**https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/falsy
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
