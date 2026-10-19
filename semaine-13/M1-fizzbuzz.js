@@ -20,4 +20,22 @@ Pourquoi FizzBuzz est-il célèbre dans les entretiens d'embauche de développeu
 
 // ✍️ Ton code ici 👇 (règles : const/let, ===, gabarits littéraux, fonctions fléchées, camelCase)
 
-
+const limite = 30;
+const estMultipleDe = (nombre, diviseur) => nombre % diviseur === 0;
+const fizzBuzzKinois = (nombre) => {
+    if (estMultipleDe(nombre, 3) && estMultipleDe(nombre, 5)){
+        return "MalewaWewa";
+    }
+    if (estMultipleDe(nombre, 3)) {
+        return "Malewa";
+    }
+    if (estMultipleDe(nombre, 5)) {
+        return"Wewa";
+    }
+    return`${nombre}`;
+};
+const resultats = [];
+for (let i = 1; i <= limite; i++) {
+    resultats.push(fizzBuzzKinois(i));
+}
+console.log(resultats.join(" , "));

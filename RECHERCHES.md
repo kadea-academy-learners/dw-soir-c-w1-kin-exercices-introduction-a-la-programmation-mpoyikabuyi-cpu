@@ -131,15 +131,27 @@ console.log (carre(7));      // resultat undefined
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
 
-...
+FizzBuzz est célèbre parce que c'est un test très simple qui de permet de vérifier vite si un candidat sait vraiment programmer.
+il faut utiliser une boucle, le modulo et des conditions.beaucoup de candidat se trompent sur l'ordre des conditions : le cas " multiple de 3 et de 5 doit etre testé en premier.
 
 **Mon test dans la console :**
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
-```
+const estMultipleDe = (nombre, diviseur) => nombre % diviseur === 0;
+const fizzBuzzKinios = (nombre) => {
+  if (estMultipleDe(nombre, 3) && estMultipleDe(nombre, 5)) return "Malewawe";
+  if (estMultipleDe(nombre, 3)) return "Malewa";
+  if (estMultipleDe(nombre, 5)) return "Wewa";
+  return `${nombre}`;
+};
+const resultats = [],
+for (let i; i <= 30 ; i++) {
+  resultats.push(fizzBuzzKinios(i));
+}
+console.log(resultats.join(" , "));       // 1, 2, Malewa, 4, Wewa, Malewa, 7, 8, Malewa, 11, Malewa, 13, 14, MalewaWewa, 16, 17, Malewa, 19, Wewa, 22, 23, Malewa, Wewa, 26, Malewa,28, 29, MalewaWewa
 
-**Source :** 
+**Source :** https://coddy.tech/learn/javascript/fundamentals/the_fizzbuzz_function
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
