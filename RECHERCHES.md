@@ -220,18 +220,22 @@ console.log("" ?? "aucun"); // ""
 **Question :** Pourquoi var est-il banni du code moderne ? Cherche ce que sont la portée de fonction et le « hoisting ».
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
-
+une varialble déclarée avec var a une portée de fonction : elle est visible dans toutes la fonction, meme hors d'un bloc if ou for. cela crée des bugs, car une variable peut "fuir" d'un bloc. avec le hoisting, var est aussi remontrée en haut  et vaut undefined avant sa ligne, ce qui cache des erreurs. let et const ont une portée de bloc et refusent d'etre utilisées avant leur déclaration.
 ...
 
 **Mon test dans la console :**
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
-```
+if (true) { var a = 1; let b = 2;}
+console.log(a);   // 1(var fuit hors du bloc)
+console.log(b);   // réferenceError: bis not defined
+console.log(c);  // undefined (horsting de var)
+var c = 5;
 
-**Source :** 
+**Source :** https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Statements/var
 
-**IA utilisée ? (prompt + vérification sur MDN) :** non
+**IA utilisée ? (prompt + vérification sur MDN) :** oui
 
 ## M6 — Le détective du return
 
