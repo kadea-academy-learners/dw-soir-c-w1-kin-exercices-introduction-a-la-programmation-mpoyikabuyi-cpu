@@ -242,18 +242,23 @@ var c = 5;
 **Question :** Le troisième bug vient de l'« insertion automatique de point-virgule » (ASI). Explique ce mécanisme en 3 lignes.
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
-
+L'ASI (Automatic Semicolon Insertion) est un mécanisme de JavaScript qui ajout tout seul des points-virgules quand on n'en écrit pas. après le mot return, un retour à la ligne est traité comme la fin de l'instruction : javascript ajoute un point-virgule et la fonction renvoie undefined. la valeur à renvoyer doit donc commencer sur la meme ligne que return.
 ...
 
 **Mon test dans la console :**
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
-```
+const a = () => {
+return 42;
+};
 
-**Source :** 
+console.log(a());
+return 42
 
-**IA utilisée ? (prompt + vérification sur MDN) :** non
+**Source :** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar
+
+**IA utilisée ? (prompt + vérification sur MDN) :** oui
 
 ## M7 — La tirelire numérique
 
