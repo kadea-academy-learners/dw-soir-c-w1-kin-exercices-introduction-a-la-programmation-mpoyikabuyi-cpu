@@ -265,16 +265,19 @@ return 42
 **Question :** Cite tous les opérateurs d'affectation composée (+=, -=…) et donne un exemple pour chacun.
 
 **Ma réponse (avec mes mots, 3 à 5 lignes) :**
-
+un opérateur d'affectation composée fait un calcul avec la variable puis range le résultat dans la meme variable.
 ...
 
 **Mon test dans la console :**
 
 ```js
 // colle ici le test que tu as exécuté et le résultat obtenu
-```
+let x = 10
+x += 5;    // x = x + 5  -> 15
+x -= 3;   // x = x -3   -> 12
 
-**Source :** 
+
+**Source :** https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment
 
 **IA utilisée ? (prompt + vérification sur MDN) :** non
 
